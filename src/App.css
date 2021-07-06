@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+
+.auto-index{
+  counter-reset: serial-number;
+}
+.auto-index td:first-child:before{
+  counter-increment: serial-number;      /* Increment the Serial counter */
+  content: counter(serial-number); /* Display the counter */
+}
